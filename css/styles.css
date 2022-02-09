@@ -16,7 +16,6 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  /* line-height: ??px; */
   color: var(--txt-clr);
   background-color: var(--white-clr);
 }
@@ -55,11 +54,6 @@ address {
 .container {
   width: 1200px;
   margin: 0 auto;
-}
-
-.header-section .container,
-.section .container,
-.footer-section .container {
   padding: 0 15px;
 }
 
@@ -336,13 +330,12 @@ address {
 
 /* верхний блок */
 
-.container.align-btn {
-  display: flex;
+.buttons {
+  margin-bottom: 50px;
   justify-content: center;
-  padding-bottom: 16px;
 }
 
-.align-btn li:not(:last-child) {
+.buttons li:not(:last-child) {
   margin-right: 8px;
 }
 
@@ -359,24 +352,20 @@ address {
 /* нижний блок */
 
 .wrapper {
-  display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
 }
 
 .projects {
   margin-right: 30px;
-  margin-bottom: 30px;
-  width: 370px;
-  border: 0px solid #f00;
+  margin-bottom: 0px;
 }
 
 .projects:nth-child(3n) {
   margin-right: 0;
 }
 
-.projects:nth-child(n + 6) {
-  margin-bottom: 0;
+.projects:nth-last-child(n + 4) {
+  margin-bottom: 30px;
 }
 
 .img-sign {
