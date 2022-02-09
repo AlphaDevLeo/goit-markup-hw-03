@@ -11,6 +11,30 @@
   --black-clr: #000000;
 }
 
+/* (какой вариант правильный?)
+
+          В видео Репеты:
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+          В конспекте: 
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*/
+
 body {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -21,11 +45,38 @@ body {
   background-color: var(--white-clr);
 }
 
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0px;
+}
+
+body * {
+  outline: 1px solid tomato;
+}
+
 /* +++++++++++++++++++++++++++
 
   Свойства глобальных классов
 
 +++++++++++++++++++++++++++ */
+
+.container {
+  width: 1200px;
+  margin: 0px auto;
+}
+
+.horisontal-orientation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.section {
+  padding: 94px 0px;
+}
 
 .list {
   list-style-type: none;
@@ -56,14 +107,12 @@ body {
   color: var(--brand-clr);
 }
 
-.horisontal-orientation {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
 .invisible {
   display: none;
+}
+
+.ul-align {
+  padding: 0px 15px;
 }
 
 /* +++++++++++++++++++++++++++
@@ -73,11 +122,8 @@ body {
 +++++++++++++++++++++++++++ */
 
 .header-style {
-  height: 80px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   border-bottom: solid 1px var(--border-clr);
+  padding: 24px 0px 25px 0px;
 }
 
 .logo-black {
@@ -102,6 +148,19 @@ body {
   color: var(--brand-clr);
 }
 
+.logo-margin {
+  margin-right: 93px;
+}
+
+.nav-list-item,
+.mail-margin {
+  margin-right: 50px;
+}
+
+.right-align {
+  margin-left: auto;
+}
+
 /* +++++++++++++++++++++++++++
 
            FOOTER
@@ -109,15 +168,21 @@ body {
 +++++++++++++++++++++++++++ */
 
 .footer-style {
-  height: 252px;
+  padding: 60px 0px;
   background-color: var(--footer-clr);
 }
 
 .logo-white {
   color: var(--white-clr);
+  display: block;
+  margin-bottom: 20px;
 }
 
 /* Контакты */
+
+.contact-margin {
+  margin-bottom: 9px;
+}
 
 .footer-address,
 .footer-contact {
@@ -143,23 +208,25 @@ body {
 /* HERO */
 
 .hero-section {
-  height: 600px;
   background-color: var(--footer-clr);
   text-align: center;
+  padding: 200px 0px;
 }
 
 .hero {
   font-weight: 900;
   font-size: 44px;
+
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-clr);
+  margin-bottom: 30px;
 }
 
 .order-btn {
-  width: 200px;
-  height: 50px;
+  padding: 10px 32px;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
@@ -168,7 +235,15 @@ body {
   background-color: var(--brand-clr);
 }
 
-/* 2 */
+/* Наши преимущества */
+
+.section-benefit {
+  padding-bottom: 0px;
+}
+
+.benefit-block {
+  width: 270px;
+}
 
 .benefit {
   font-size: 14px;
@@ -176,6 +251,7 @@ body {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-bottom: 10px;
   color: var(--contrast-clr);
 }
 
@@ -185,10 +261,16 @@ body {
   color: var(--txt-clr);
 }
 
-/* 3 */
+/* Направления деятельности */
+
+.margin-right {
+  margin-right: 30px;
+}
 
 .activity,
 .team {
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -198,18 +280,22 @@ body {
 }
 
 .team-section {
-  height: 648px;
   background-color: var(--nuance-clr);
 }
 
 .employee {
   width: 270px;
-  height: 368px;
+  padding-bottom: 30px;
+
   background-color: var(--white-clr);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 12%);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 14%);
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 20%);
+}
+
+.employee img {
+  margin-bottom: 30px;
 }
 
 .name,
@@ -222,6 +308,7 @@ body {
 }
 
 .name {
+  margin-bottom: 10px;
   font-weight: 500;
   color: var(--contrast-clr);
 }
@@ -237,7 +324,7 @@ body {
 +++++++++++++++++++++++++++ */
 
 .filter-btn {
-  height: 38px;
+  padding: 6px 22px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
@@ -248,10 +335,8 @@ body {
 
 .projects {
   width: 370px;
-  height: 404px;
   background: var(--white-clr);
   border: 1px solid var(--work-bgd);
-  box-sizing: border-box;
 }
 
 .line-off {
